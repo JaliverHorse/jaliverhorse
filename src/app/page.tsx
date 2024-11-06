@@ -1,19 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Title from "@/Atoms/Title";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
+       <Title/>
+               <ol>
           <li>
             This is a landing page where New NHBC Buyer / Tenant / leaseholder  -Tenant will log in -  <code>src/app/page.tsx</code>.
           </li>
