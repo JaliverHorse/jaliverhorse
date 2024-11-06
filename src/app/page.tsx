@@ -15,9 +15,9 @@ export default function Home() {
         />
         <ol>
           <li>
-            This is a landing page <code>src/app/page.tsx</code>.
+            This is a landing page where New NHBC Buyer / Tenant / leaseholder  -Tenant will log in -  <code>src/app/page.tsx</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>No requirement for SSO - Integration to FB, Google, MS Aure.</li>
         </ol>
 
         <div className={styles.ctas}>
