@@ -1,19 +1,24 @@
+import React from 'react';
 import Image from "next/image";
 import styles from "./page.module.css";
-import Title from "@/Atoms/Title";
+import Title from "../../components/atoms/title";
+import SidebarWrapper from "../../components/molecules/SidebarWrapper";
+// Import Syncfusion CSS files directly in the JavaScript/TypeScript file
+import '@syncfusion/ej2-base/styles/material.css';
+import '@syncfusion/ej2-navigations/styles/material.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <SidebarWrapper elementId="sidebar" />
       <main className={styles.main}>
-       <Title/>
-               <ol>
+        <Title />
+        <ol>
           <li>
-            This is a landing page where New NHBC Buyer / Tenant / leaseholder  -Tenant will log in -  <code>src/app/page.tsx</code>.
+            This is a landing page where New NHBC Buyer / Tenant / leaseholder - Tenant will log in - <code>src/app/page.tsx</code>.
           </li>
-          <li>No requirement for SSO - Integration to FB, Google, MS Aure.</li>
+          <li>No requirement for SSO - Integration to FB, Google, MS Azure.</li>
         </ol>
-
         <div className={styles.ctas}>
           <a
             className={styles.primary}
@@ -28,62 +33,9 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
           </a>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
